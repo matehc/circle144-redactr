@@ -1,19 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of chosen challenge</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redactr</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-    <h2>make some magic here!!</h2>
 
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
-    <script src="index.mjs" type="module"></script>
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
+<body>
+
+  <!--     <h2>make some magic here!!</h2> -->
+  <div class="wrapper">
+
+    <div class="heading">
+      <h1 class="title">Redactr</h1>
+
+
+      <div class="btn-box">
+
+        <button id="redactBtn" class="btn">
+          <i class="fa-solid fa-eye-slash"></i>
+          Redact
+        </button>
+
+        <button class="btn btn--clear">
+          <i class="fa-solid fa-trash icons"></i>
+          clear
+        </button>
+      </div>
+    </div>
+    <form action="" id="msgForm">
+      <label for="msg" class="msgLabel">
+        <textarea name="message" id="msg" cols="30" rows="10" placeholder="Please type/paste message"></textarea>
+      </label>
+
+    </form>
+
+    <form action="" id="keywordForm">
+
+      <label for="keyword" class="keywordLabel">
+        <input type="text" id="keyword" placeholder="Type in keywords">
+      </label>
+
+      <label for="substitute" class="substituteLabel">
+        <input type="text" id="substitute" placeholder="Type in character / word to be used for redact">
+      </label>
+
+
+    </form>
+
+    <form action="" id="resultForm">
+      <label for="" class="displayBoxLabel">
+        <textarea name="result" class="displayBox" readonly id="resultBox" cols="30" rows="10"></textarea>
+      </label>
+    </form>
+
+
+
+    <div class="notification hidden btn--clear">
+      Message and keyword input should not be empty
+      <!-- <i class="fa-solid fa-xmark notification-icon"></i> -->
+    </div>
+
+    <div class="status">
+      <div class="word-count stat">Number of words: <span class="stat-word-count">0</span></div>
+      <div class="match-count stat">Words Matched: <span class="stat-match-count">0</span></div>
+      <div class="timer stat">Execution time: <span class="stat-timer">0ms</span></div>
+    </div>
+
+
+  </div>
+
+
+
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+  <script src="index.mjs" type="module"></script>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
+
 </html>
